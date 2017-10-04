@@ -1,0 +1,3 @@
+Average Serial Run Time: 6.7582
+Parallel Speed up: 1.94436
+Omp Speed up: 0.964383

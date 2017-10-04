@@ -1,0 +1,22 @@
+﻿Build started 11/18/2014 6:56:01 PM.
+     1>Project "C:\Users\mklick16\Desktop\color_average\greyscale\greyscale.vcxproj" on node 2 (Build target(s)).
+     1>AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_LIB /D_UNICODE /DUNICODE /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include" /I. /FIcuda_runtime.h /c C:\Users\mklick16\Desktop\color_average\greyscale\sobel_edge.cu 
+       CudaBuild:
+         Compiling CUDA source file sobel_edge.cu...
+         cmd.exe /C "C:\Users\mklick16\AppData\Local\Temp\tmpf2c3ff4d9be64cdca046aaa6ed0dac98.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2012 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_LIB -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\sobel_edge.cu.obj "C:\Users\mklick16\Desktop\color_average\greyscale\sobel_edge.cu"
+         
+         C:\Users\mklick16\Desktop\color_average\greyscale>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2012 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_LIB -D_UNICODE -DUNICODE -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\sobel_edge.cu.obj "C:\Users\mklick16\Desktop\color_average\greyscale\sobel_edge.cu" 
+         sobel_edge.cu
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mklick16\Desktop\color_average\Debug\coloraverage.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.0\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mklick16\Desktop\color_average\Debug\coloraverage.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mklick16\Desktop\color_average\Debug\coloraverage.lib" /MACHINE:X86 Debug\device.cu.obj
+         Debug\reduce.cu.obj
+         Debug\sobel_edge.cu.obj
+         Debug\Source.obj
+         greyscale.vcxproj -> C:\Users\mklick16\Desktop\color_average\Debug\coloraverage.exe
+     1>Done Building Project "C:\Users\mklick16\Desktop\color_average\greyscale\greyscale.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.41

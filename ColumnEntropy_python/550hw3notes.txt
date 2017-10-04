@@ -1,0 +1,56 @@
+###assumption:MSA seqs have same # of columns. extract all columns in MSA
+##cols = [''.join([align[j][i] for j in range(len(align))]) for i in range(len(align[0]))]
+###most effective list comprehension I've made to calcualte column entropy. First the probality for each AA is calculated. Then p is used to calcualte entropy for each AA in column. 
+##entropys = [((len(re.findall(cols[i][j],cols[i]))*1.0/len(cols[i])*1.0)*math.log((len(re.findall(cols[i][j],cols[i]))*1.0/len(cols[i])*1.0),2)) for i in range(len(cols))for j in range(len(cols[i]))]
+###sum over calculated individual AA entropys to get values for each column's entropy
+##entropys = [sum(entropys[i:i+len(cols[0])]) for i in range(0,len(entropys),len(cols[0]))]
+###Next, we sum up those values to get the alignment entropy
+##Align_Entropy = sum(entropys)
+##
+##
+##test = ['AAA','ACC','ACG','ACT']
+##cols = [''.join([test[j][i] for j in range(len(test))]) for i in range(len(test[0]))]
+##probs = [((len(re.findall(cols[i][j],cols[i]))*1.0/len(cols[i])*1.0)) for i in range(len(cols))for j in range(len(cols[i]))]
+##probs = [probs[i:i+len(cols[0])]for i in range(0,len(probs),len(cols[0]))]
+###realized I was recording the probabilities incorrectly e.g. ACCC = 0.25 0.75 0 0 where i had ACCC = 0.25 0.75 0.75 0.75 . just have to fix by checking if i+1 character has been seen yet. 
+##for i in range(len(probs)):
+##    for j in range(len(probs[i])):
+##        if j==len(probs[i])-1:
+##            break
+##        elif probs[i][j] == probs[i][j+1] and cols[i][j] == cols[i][j+1]:
+##            probs[i][j]=0
+##            probs[i][j+1]=0
+##            break
+##               
+##for i in range(len(probs)):
+##    for j in range(len(probs[i])):
+##        p = float(probs[i][j])
+##        if p != 0:
+##            probs[i][j] = p*math.log(p,2)
+##Align_Entropy = [-sum(probs[i]) for i in range(len(probs))]
+##Align_Entropy = sum(Align_Entropy)
+##col = []
+##for i in range(len(align[0])):
+##    #col = []
+##    #for j in range(len(align)):
+##        #col.append(''.join(align[j][i]))
+##    col.append(''.join([align[j][i] for j in range(len(align))])) 
+##Counts the frequency of AA in a seq
+
+##def count_aa (summ, aa) :
+##    r_count = str(summ[2]).count(aa)
+##    summ[0][aa] = r_count
+##    summ[1] = summ[1] + r_count
+##    return summ
+##
+####Counts the frequency of each AA for each residue
+##def count_residues(seq):
+##    return reduce(count_aa, AA,[{},0,seq])
+##
+####stores the frequencies for each AA at each residue in MSA 
+##seq_counts = map(count_residues,cols)
+##
+####stores the probability for each AA at each resdiue in MSA 
+##seq_probs = map( lambda (d,t,s): (
+##                    dict(map(lambda (a,c): (a,c/(t*1.0)),d.iteritems()))
+##                ), seq_counts)

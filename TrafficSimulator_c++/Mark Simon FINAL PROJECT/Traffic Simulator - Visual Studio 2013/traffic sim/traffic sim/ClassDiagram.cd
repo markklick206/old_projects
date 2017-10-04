@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Simulator">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQACAAAAAAQAAAQAAAAAAwAEIEAABAAwCgSAAACAAA=</HashCode>
+      <FileName>Simulator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RD">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgIAAQAAAAQAIAAAAAAAQEIAAAAAAAAAAABgA=</HashCode>
+      <FileName>RD.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Travis">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAASA=</HashCode>
+      <FileName>Travis.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jackson">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAgAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Jackson.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JacksonQueue">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAQAAAQEAAAAAAAAAAIEAACAAAAACAAIE=</HashCode>
+      <FileName>JacksonQueue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TravisQueue">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAgAAAAAAAQEAAAAAAAAAAIEAACAAAAACAAIE=</HashCode>
+      <FileName>TravisQueue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="car">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAABABAAAQAAAAwAABAAAIEAQAAAAAAAAAAABA=</HashCode>
+      <FileName>car.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

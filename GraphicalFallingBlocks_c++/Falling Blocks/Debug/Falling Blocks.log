@@ -1,0 +1,24 @@
+﻿Build started 3/14/2014 1:07:36 PM.
+     1>Project "Q:\mklick16\Random\Falling Blocks\Falling Blocks.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Falling Blocks.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Falling Blocks.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "Falling Blocks.cpp" GameMgr.cpp
+         GameMgr.cpp
+     1>q:\mklick16\random\falling blocks\gamemgr.cpp(48): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         Falling Blocks.cpp
+     1>q:\mklick16\random\falling blocks\falling blocks.cpp(26): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\Falling Blocks.res" "Falling Blocks.rc" 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Q:\mklick16\Random\Falling Blocks\Debug\Falling Blocks.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Q:\mklick16\Random\Falling Blocks\Debug\Falling Blocks.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Q:\mklick16\Random\Falling Blocks\Debug\Falling Blocks.lib" /MACHINE:X86 "Debug\Falling Blocks.res"
+         "Debug\Falling Blocks.obj"
+         Debug\GameMgr.obj
+         Debug\stdafx.obj
+         Falling Blocks.vcxproj -> Q:\mklick16\Random\Falling Blocks\Debug\Falling Blocks.exe
+     1>Done Building Project "Q:\mklick16\Random\Falling Blocks\Falling Blocks.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:25.42

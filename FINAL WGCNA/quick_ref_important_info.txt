@@ -1,0 +1,413 @@
+#####################################################
+# module preservation in TP of modules determined in NT 
+# levels of preservation indicated by the z preservation score > 20 < 10 < 5 < 0
+> stats[order(-stats[,2]),c(1:2)]
+                moduleSize Zsummary.pres
+turquoise              400     30.060311
+brown                  344     25.655584
+blue                   345     23.355032
+darkgreen              101     21.904717
+green                  178     21.166035
+yellow                 288     18.439305
+salmon                 137     17.120082
+greenyellow            151     16.869833
+pink                   163     13.802650
+darkturquoise           91     12.048758
+magenta                160     12.037075
+darkgrey                91     11.870573
+mediumpurple3           60     11.861733
+ivory                   55     11.653753
+red                    166     11.179360
+black                  165     10.992239
+grey                   400     10.253159
+royalblue              102     10.053172
+violet                  70     10.015716
+darkslateblue           48      9.716687
+grey60                 113      9.500365
+tan                    140      9.390804
+brown4                  51      9.340840
+lightcyan              114      9.312888
+skyblue                 82      9.169340
+lightpink4              37      8.906752
+darkorange2             52      8.725056
+darkolivegreen          70      8.381416
+thistle2                45      8.194390
+skyblue2                29      7.844841
+lightgreen             112      7.761937
+bisque4                 49      7.266727
+orange                  88      7.100851
+sienna3                 68      6.988707
+paleturquoise           73      6.759418
+maroon                  37      6.671407
+gold                   100      6.496443
+skyblue3                63      6.495077
+lightsteelblue1         60      6.488785
+navajowhite2            38      6.475439
+cyan                   137      6.417627
+steelblue               75      6.266487
+coral1                  34      5.973031
+midnightblue           120      5.950154
+darkmagenta             69      5.836770
+white                   86      5.808622
+darkseagreen4           34      5.634374
+plum1                   62      5.587558
+orangered4              61      5.568342
+saddlebrown             78      5.496029
+thistle1                43      5.354539
+palevioletred3          39      4.900585
+lightcyan1              60      4.887967
+plum2                   47      4.772795
+antiquewhite4           33      4.601183
+yellowgreen             65      4.333451
+orangered3              26      4.313090
+honeydew1               34      4.289942
+salmon4                 43      4.289810
+floralwhite             54      4.197300
+darkred                101      3.853923
+lightsteelblue          25      3.453609
+mediumorchid            32      3.443091
+firebrick4              21      3.203694
+lavenderblush3          35      3.168354
+darkorange              87      3.132696
+purple                 159      2.876318
+coral2                  32      2.719392
+indianred4              21      1.908238
+skyblue1                28      1.782010
+lightcoral              22      1.694676
+plum                    26      1.690574
+yellow4                 28      1.643724
+mediumpurple2           25      1.613537
+lightyellow            106      1.279080
+
+#################################################################
+> topGenesKME
+      antiquewhite4 bisque4    black    blue      brown      brown4    coral1   coral2     cyan      darkgreen darkgrey
+ [1,] "CSRNP1"      "BUD31"    "ACOT13" "DNAJC13" "APC"      "CD300C"  "ATP5L"  "AZI2"     "BAP1"    "BUB1"    "COPS4" 
+ [2,] "FOSB"        "COPS6"    "DNAJC8" "EXOC5"   "ATRX"     "CD68"    "MRPL22" "BCL2L13"  "DHX16"   "CEP55"   "GTF2A2"
+ [3,] "HBEGF"       "DCTN2"    "DRG1"   "ITCH"    "CHM"      "CYTH4"   "MRPL33" "COL4A3BP" "EIF4H"   "CKAP2L"  "MMADHC"
+ [4,] "JUNB"        "HAX1"     "EIF2S2" "PBRM1"   "CREB1"    "FERMT3"  "MRPS33" "DENND5A"  "EWSR1"   "DLGAP5"  "MRPL33"
+ [5,] "NR4A1"       "NDUFS3"   "MRPS22" "PIKFYVE" "ITCH"     "ITGB2"   "NDUFS3" "KCTD20"   "GSK3A"   "EXO1"    "PSMA1" 
+ [6,] "NR4A3"       "PARK7"    "NDUFB3" "ROCK1"   "SEC24B"   "LILRB4"  "PDZD11" "NEK7"     "L3MBTL2" "KIF11"   "PSMD10"
+ [7,] "PPP1R15A"    "PSMB7"    "PSMA2"  "TRIP12"  "TMEM184C" "PILRA"   "PSMA1"  "PCYOX1"   "RIC8A"   "KIF4A"   "RAB1A" 
+ [8,] "RNF122"      "PSMD9"    "PSMC2"  "UBR3"    "TNPO1"    "SIGLEC7" "PSMA2"  "PPP2R1B"  "SARS"    "NCAPG"   "SEC22A"
+ [9,] "SOCS3"       "TACO1"    "TAF12"  "ZFP91"   "USP34"    "SPI1"    "SSBP1"  "PTPN11"   "SF3B2"   "NUSAP1"  "UBE2D2"
+[10,] "ZFP36"       "TRAPPC2L" "UBE2L3" "ZYG11B"  "ZNF148"   "TYROBP"  "TBCA"   "VKORC1L1" "XRCC6"   "TPX2"    "VBP1"  
+      darkmagenta darkolivegreen darkorange darkorange2 darkred       darkseagreen4 darkslateblue darkturquoise
+ [1,] "ATP8B1"    "DDX20"        "ASB6"     "RPL10A"    "DOCK11"      "BANF1"       "C3orf38"     "ANKRD13C"   
+ [2,] "BBS1"      "DENR"         "C9orf114" "RPL12"     "EPB41L2"     "CNPY2"       "COPS4"       "CREB1"      
+ [3,] "CHD8"      "HAT1"         "CHERP"    "RPL14"     "FERMT2"      "LSM2"        "EIF3J"       "FBXO11"     
+ [4,] "COG7"      "HNRNPU"       "GGA1"     "RPL27A"    "ITSN1"       "NHP2L1"      "PSMD10"      "IBTK"       
+ [5,] "MARVELD2"  "KHDRBS1"      "MARK2"    "RPL29"     "LAMA4"       "RNF5"        "PTGES3"      "ITCH"       
+ [6,] "RALGPS1"   "MATR3"        "MEN1"     "RPLP0"     "MAP4"        "RPL24"       "RDH14"       "PPP2R5E"    
+ [7,] "RBM47"     "PPHLN1"       "PRPF19"   "RPS14"     "NRP1"        "RPL27A"      "SEC22A"      "SLC35A5"    
+ [8,] "SECISBP2"  "RPAP3"        "RAB25"    "RPS2"      "PALM2-AKAP2" "SNRPA"       "UBE2D2"      "SOCS4"      
+ [9,] "TADA2B"    "TRA2B"        "RTKN"     "RPS8"      "RHOQ"        "SNRPC"       "UBE2D3"      "TBC1D23"    
+[10,] "TTC8"      "XRCC5"        "SGSM3"    "RPSAP58"   "TNS1"        "SNRPD2"      "YIPF5"       "TNPO1"      
+      firebrick4 floralwhite green     greenyellow grey     grey60    honeydew1 indianred4 ivory     lavenderblush3
+ [1,] "CHST12"   "ARL2"      "CD3D"    "CUL3"      "CTCF"   "ANAPC2"  "AOC3"    "ATP8B1"   "C3AR1"   "ABI3"        
+ [2,] "COL6A2"   "CCM2"      "CD3E"    "FASTKD2"   "DHX9"   "CNTROB"  "AQP7"    "CDS1"     "CD33"    "AIF1"        
+ [3,] "EFEMP2"   "DBNL"      "CD5"     "HIAT1"     "HNRNPK" "CXXC1"   "CIDEC"   "CRNKL1"   "CD4"     "CARD16"      
+ [4,] "LYL1"     "FAM50A"    "CD6"     "LIN54"     "HNRNPU" "GGA1"    "GPD1"    "ERBB3"    "CSF1R"   "CD74"        
+ [5,] "MFRP"     "GPX1"      "LCK"     "MATR3"     "LUC7L2" "PRKRIP1" "ITGA7"   "FOXA1"    "FCER1G"  "CKLF"        
+ [6,] "PDLIM2"   "MAP7D1"    "MAP4K1"  "PAPOLA"    "MATR3"  "SH2B1"   "LIPE"    "MARVELD2" "HAVCR2"  "CLIC1"       
+ [7,] "PRKCDBP"  "POLR2E"    "PTPN7"   "PRPF40A"   "SMG7"   "SRRT"    "NPR1"    "RALGPS2"  "LILRB2"  "LST1"        
+ [8,] "RCN3"     "RNPEPL1"   "SP140"   "SMARCAD1"  "TARDBP" "TAB1"    "PLIN1"   "RBM47"    "LRRC25"  "NECAP2"      
+ [9,] "TGFB1"    "UROD"      "SPN"     "SNX4"      "UBAP2L" "USP20"   "RDH5"    "RUNDC1"   "MS4A6A"  "RHOG"        
+[10,] "TSPAN4"   "VPS4A"     "UBASH3A" "UBXN4"     "XRCC5"  "ZBTB48"  "TUSC5"   "ZNF627"   "SIGLEC1" "TNFAIP8L2"   
+      lightcoral lightcyan lightcyan1 lightgreen lightpink4 lightsteelblue lightsteelblue1 lightyellow magenta  
+ [1,] "ACVRL1"   "DDX20"   "CLEC2B"   "ARF5"     "BIN2"     "ANAPC11"      "ATF6B"         "ACTR3B"    "ADNP"   
+ [2,] "CD248"    "DYRK1A"  "CTSK"     "ARPC4"    "BTK"      "C19orf70"     "ATXN7L3"       "CDCA7L"    "BCLAF1" 
+ [3,] "CD34"     "HIAT1"   "DCN"      "BUD31"    "CD53"     "CLPP"         "BAP1"          "GABRP"     "PALB2"  
+ [4,] "EMP3"     "KHDRBS1" "DPYSL3"   "COPS6"    "HCLS1"    "CUEDC2"       "DHX16"         "PADI2"     "PRPF40A"
+ [5,] "EMX2"     "MATR3"   "FLI1"     "LSM4"     "HLA-DMB"  "MRPL28"       "DHX30"         "RASAL1"    "PRPF4B" 
+ [6,] "F10"      "PAPOLA"  "LUM"      "MRPL51"   "LAPTM5"   "NDUFA13"      "MBD1"          "ROPN1"     "QTRTD1" 
+ [7,] "GSN"      "PCNP"    "OLFML1"   "MRPL52"   "MYO1F"    "NDUFB10"      "RANBP3"        "SFRP1"     "RBMX"   
+ [8,] "LRRN4CL"  "PRPF40A" "PRRX1"    "NHP2L1"   "NCKAP1L"  "NDUFB7"       "RXRB"          "SOX10"     "SASS6"  
+ [9,] "MFAP4"    "RPAP3"   "SERPING1" "POP7"     "SASH3"    "NDUFB8"       "SKIV2L"        "TIGD2"     "USP37"  
+[10,] "VIM"      "SNX4"    "TIMP2"    "PSMD13"   "WAS"      "PSMB6"        "UBTF"          "TMEM71"    "YTHDC1" 
+      maroon     mediumorchid mediumpurple2 mediumpurple3 midnightblue navajowhite2 orange   orangered3 orangered4
+ [1,] "AZI2"     "ACOT13"     "COPZ2"       "BRPF3"       "DSE"        "BLOC1S1"    "ARID1A" "ACVRL1"   "CASP2"   
+ [2,] "EXOC5"    "AZI2"       "CYB5R3"      "CDK13"       "ERG"        "COPS6"      "BRD2"   "BGN"      "CNOT10"  
+ [3,] "IFNAR1"   "HADHB"      "LGALS1"      "CHD8"        "FAM26E"     "LSM10"      "BRPF3"  "C10orf54" "GTF3C2"  
+ [4,] "KCTD20"   "ICMT"       "MARCH2"      "EP300"       "FLI1"       "NDUFA2"     "CHD2"   "C1R"      "QTRTD1"  
+ [5,] "KIAA1715" "NRD1"       "PTH1R"       "EP400"       "HEG1"       "NDUFB10"    "CHD8"   "C1S"      "RBBP4"   
+ [6,] "MAPK14"   "RAD23B"     "PTRF"        "GIGYF2"      "NRP1"       "NDUFB2"     "EP400"  "PCOLCE"   "RBMX"    
+ [7,] "PTPN11"   "SSB"        "RILP"        "GON4L"       "TCF4"       "NDUFB8"     "KDM3B"  "RAB3IL1"  "SMARCC1" 
+ [8,] "RAD23B"   "STX12"      "RRAS"        "GPATCH8"     "TEK"        "PARK7"      "LUC7L2" "SERPING1" "SRPK1"   
+ [9,] "SNX6"     "UBE2A"      "SERPINF1"    "KDM3B"       "TGFBR2"     "UQCR11"     "PRDM10" "TMEM173"  "TDP1"    
+[10,] "TMED5"    "WSB2"       "VIM"         "LMTK2"       "ZEB1"       "UROD"       "ZMYM3"  "TNFRSF1B" "USP10"   
+      paleturquoise palevioletred3 pink      plum       plum1    plum2     purple    red       royalblue  saddlebrown
+ [1,] "CAPZA2"      "DBNL"         "CISD2"   "ACVRL1"   "AXL"    "CTCF"    "AACS"    "ITGB1"   "ACVRL1"   "CNPY2"    
+ [2,] "CYB5B"       "EML3"         "COPS4"   "C10orf54" "CARD6"  "DKC1"    "FDFT1"   "ITSN1"   "ARHGEF15" "DIABLO"   
+ [3,] "EIF2S1"      "FBXW5"        "COPZ1"   "COL6A2"   "CYBB"   "HNRNPC"  "FDPS"    "JAK1"    "CLEC14A"  "EIF3I"    
+ [4,] "RAB1A"       "FIS1"         "NUP37"   "EMP3"     "FPR3"   "KHDRBS1" "GGTLC2"  "KCTD20"  "ESAM"     "HNRNPM"   
+ [5,] "RAD23B"      "FKBP8"        "PPP1R11" "IFFO1"    "HEG1"   "LUC7L2"  "HMGCR"   "LIMS1"   "MMRN2"    "LAS1L"    
+ [6,] "RALA"        "NR1H2"        "PSMD10"  "MFRP"     "MPEG1"  "NONO"    "IDI1"    "PTPN11"  "PLVAP"    "MEN1"     
+ [7,] "SEPT7"       "PIN1"         "RARS"    "MGAT1"    "PTAFR"  "RBMX"    "KMO"     "RRAGC"   "ROBO4"    "NAP1L4"   
+ [8,] "SNRNP27"     "RNH1"         "RDH14"   "PTGIR"    "RGL1"   "TDP1"    "MPV17L"  "SEC23A"  "SCARF1"   "NHP2L1"   
+ [9,] "VAMP7"       "UBXN6"        "SUMO1"   "STAB1"    "SAMHD1" "TRIM27"  "PXMP4"   "SH3GLB1" "SH2D3C"   "RFC2"     
+[10,] "VBP1"        "USF2"         "UBE2D2"  "TGFB1"    "SIRPB2" "WRNIP1"  "SLC26A6" "SNTB2"   "TIE1"     "TSSC1"    
+      salmon       salmon4  sienna3  skyblue   skyblue1   skyblue2 skyblue3    steelblue tan     thistle1   thistle2
+ [1,] "AURKAIP1"   "ARF5"   "BUD31"  "CCDC12"  "FAM174B"  "APRT"   "BRD2"      "ADCK4"   "DDX54" "ADNP"     "NACA"  
+ [2,] "COPE"       "CNPY2"  "CSNK2B" "DDX54"   "FOXA1"    "ECSIT"  "CHD4"      "CXXC1"   "E4F1"  "AFTPH"    "RPL15" 
+ [3,] "EDF1"       "ELOF1"  "DGUOK"  "HDGFRP2" "HHAT"     "EEF1D"  "CHD8"      "GGA1"    "NARFL" "CDS1"     "RPL32" 
+ [4,] "GADD45GIP1" "FIBP"   "MRPS17" "HSPBP1"  "LRTOMT"   "EIF3G"  "EIF4ENIF1" "NDOR1"   "PNKP"  "DHX15"    "RPL5"  
+ [5,] "MAP2K2"     "LYPLA2" "NHP2L1" "NT5C"    "MARVELD2" "FAU"    "LUC7L2"    "PKP3"    "QTRT1" "MARVELD2" "RPL6"  
+ [6,] "MBD3"       "MRPL52" "POLR2G" "NUBP2"   "RBM47"    "LSM7"   "SF3A1"     "SGSM3"   "SGTA"  "RPAP3"    "RPS15A"
+ [7,] "NDUFA13"    "NMRAL1" "SARNP"  "SGTA"    "RUNDC1"   "RPL13"  "SRCAP"     "THOP1"   "TBL3"  "RTF1"     "RPS23" 
+ [8,] "SSNA1"      "OTUB1"  "SDHAF2" "SIRT6"   "TRIM62"   "RPL35"  "ZC3H4"     "TSC22D4" "TELO2" "TTC30B"   "RPS27A"
+ [9,] "TMUB1"      "POP7"   "SSBP1"  "TIMM13"  "TTC8"     "RPL36"  "ZMYM3"     "XAB2"    "THOP1" "ZNF28"    "RPS3A" 
+[10,] "TRAPPC5"    "SGTA"   "TOMM22" "XAB2"    "XBP1"     "RPS9"   "ZNF142"    "ZNF653"  "XAB2"  "ZNF627"   "RPS6"  
+      turquoise  violet     white    yellow   yellow4  yellowgreen
+ [1,] "CTDSPL2"  "ANKRD13C" "ANAPC7" "ACIN1"  "ACO1"   "ASB6"     
+ [2,] "PDS5A"    "C16orf72" "DIABLO" "BRPF1"  "ADIPOQ" "CNTROB"   
+ [3,] "PRPF4B"   "HIAT1"    "ELAVL1" "CNTROB" "AOC3"   "DGCR2"    
+ [4,] "PUM2"     "MMADHC"   "HNRNPC" "CUL9"   "CIDEC"  "DGCR8"    
+ [5,] "RBM27"    "PCNP"     "HNRNPL" "DGCR8"  "GYG2"   "DPH1"     
+ [6,] "SF3B1"    "RAB10"    "PIGU"   "EDC4"   "KCNIP2" "IP6K2"    
+ [7,] "SMARCAD1" "TBK1"     "PPIL1"  "ILF3"   "PDE3B"  "MARK2"    
+ [8,] "THOC2"    "UBE2D3"   "SNRPD1" "LDB1"   "PLIN1"  "RAB25"    
+ [9,] "USP37"    "YAF2"     "TRIM27" "MBD1"   "PPARG"  "ZFYVE27"  
+[10,] "ZBTB11"   "YIPF5"    "USP39"  "SETD1A" "SIK2"   "ZNF74"  
+
+##################################################################
+# NT vs TP mapping of modules
+modulesTP_new = matchModules(Gene, modules_NT, Gene, modules_TP)
+Old - New labels: antiquewhite2 - lavenderblush1
+Old - New labels: antiquewhite4 - green4
+Old - New labels: bisque4 - darkseagreen2
+Old - New labels: black - chocolate4
+Old - New labels: blue - antiquewhite1
+Old - New labels: blue2 - coral4
+Old - New labels: blue4 - mistyrose
+Old - New labels: blueviolet - slateblue
+Old - New labels: brown - turquoise
+Old - New labels: brown2 - blue
+Old - New labels: brown4 - yellow2
+Old - New labels: coral - sienna2
+Old - New labels: coral1 - pink3
+Old - New labels: coral2 - orangered
+Old - New labels: coral3 - mediumpurple
+Old - New labels: cyan - darkgreen
+Old - New labels: darkgreen - lightskyblue4
+Old - New labels: darkgrey - lightblue3
+Old - New labels: darkmagenta - indianred2
+Old - New labels: darkolivegreen - firebrick2
+Old - New labels: darkolivegreen2 - darkolivegreen1
+Old - New labels: darkolivegreen4 - blue3
+Old - New labels: darkorange - salmon4
+Old - New labels: darkorange2 - yellowgreen
+Old - New labels: darkred - brown1
+Old - New labels: darkseagreen3 - deeppink1
+Old - New labels: darkseagreen4 - powderblue
+Old - New labels: darkslateblue - tomato
+Old - New labels: darkturquoise - tan3
+Old - New labels: darkviolet - mediumpurple3
+Old - New labels: deeppink - royalblue3
+Old - New labels: firebrick3 - skyblue
+Old - New labels: firebrick4 - greenyellow
+Old - New labels: floralwhite - palevioletred
+Old - New labels: green - midnightblue
+Old - New labels: greenyellow - moccasin
+Old - New labels: grey - grey
+Old - New labels: grey60 - ivory
+Old - New labels: honeydew - antiquewhite4
+Old - New labels: honeydew1 - tan
+Old - New labels: indianred3 - magenta2
+Old - New labels: indianred4 - lightpink1
+Old - New labels: ivory - palevioletred3
+Old - New labels: lavenderblush2 - lavenderblush
+Old - New labels: lavenderblush3 - green3
+Old - New labels: lightblue4 - darkseagreen1
+Old - New labels: lightcoral - chocolate3
+Old - New labels: lightcyan - aliceblue
+Old - New labels: lightcyan1 - thistle2
+Old - New labels: lightgreen - cornflowerblue
+Old - New labels: lightpink2 - violet
+Old - New labels: lightpink3 - lightgreen
+Old - New labels: lightpink4 - navajowhite3
+Old - New labels: lightslateblue - slateblue1
+Old - New labels: lightsteelblue - whitesmoke
+Old - New labels: lightsteelblue1 - red
+Old - New labels: lightyellow - sienna1
+Old - New labels: magenta - navajowhite2
+Old - New labels: magenta3 - pink2
+Old - New labels: magenta4 - orange4
+Old - New labels: maroon - mediumorchid4
+Old - New labels: mediumorchid - lightskyblue3
+Old - New labels: mediumpurple1 - lightblue2
+Old - New labels: mediumpurple2 - indianred1
+Old - New labels: mediumpurple3 - firebrick
+Old - New labels: mediumpurple4 - darkgoldenrod4
+Old - New labels: midnightblue - blue1
+Old - New labels: navajowhite - brown3
+Old - New labels: navajowhite1 - yellow
+Old - New labels: navajowhite2 - deeppink2
+Old - New labels: orange - purple2
+Old - New labels: orangered1 - tomato2
+Old - New labels: orangered3 - tan2
+Old - New labels: orangered4 - royalblue2
+Old - New labels: paleturquoise - white
+Old - New labels: palevioletred1 - steelblue
+Old - New labels: palevioletred2 - paleturquoise4
+Old - New labels: palevioletred3 - grey60
+Old - New labels: pink - pink
+Old - New labels: pink4 - salmon
+Old - New labels: plum - mistyrose4
+Old - New labels: plum1 - magenta1
+Old - New labels: plum2 - lightpink
+Old - New labels: plum3 - lavender
+Old - New labels: plum4 - green2
+Old - New labels: purple - darkgrey
+Old - New labels: red - darkseagreen
+Old - New labels: royalblue - chocolate2
+Old - New labels: saddlebrown - antiquewhite
+Old - New labels: salmon - brown
+Old - New labels: salmon1 - cornsilk
+Old - New labels: salmon2 - cyan
+Old - New labels: salmon4 - navajowhite4
+Old - New labels: sienna3 - purple
+Old - New labels: sienna4 - slateblue2
+Old - New labels: skyblue - wheat3
+Old - New labels: skyblue1 - sienna
+Old - New labels: skyblue2 - pink1
+Old - New labels: skyblue3 - plum
+Old - New labels: skyblue4 - orange3
+Old - New labels: steelblue - royalblue
+Old - New labels: tan - mediumorchid3
+Old - New labels: tan4 - darkolivegreen
+Old - New labels: thistle - lightskyblue2
+Old - New labels: thistle1 - honeydew1
+Old - New labels: thistle2 - lightblue1
+Old - New labels: thistle3 - lightyellow
+Old - New labels: thistle4 - indianred
+Old - New labels: turquoise - green
+Old - New labels: violet - coral1
+Old - New labels: white - dodgerblue4
+Old - New labels: yellow - darkgoldenrod3
+Old - New labels: yellow3 - blanchedalmond
+Old - New labels: yellow4 - black
+Old - New labels: yellowgreen - burlywood
+
+#######################
+# sig overlap btwn NT and TP modules
+enrichments_TP_NT$sigOverlaps
+     InputCategories   UserDefinedCategories CorrectedPvalues      
+pOut "turquoise"       "NT_green"            "4.1466513397291e-181"
+pOut "cyan"            "NT_darkgreen"        "8.58357567345732e-77"
+pOut "lightcyan1"      "NT_thistle2"         "1.32666093392757e-48"
+pOut "steelblue"       "NT_royalblue"        "1.09449660254581e-47"
+pOut "grey60"          "NT_ivory"            "2.13151384055658e-34"
+pOut "grey60"          "NT_brown4"           "3.171513126326e-33"  
+pOut "salmon"          "NT_brown"            "1.17520234366261e-32"
+pOut "lightcyan1"      "NT_darkorange2"      "3.52760471156538e-29"
+pOut "brown"           "NT_brown"            "9.20504299679333e-26"
+pOut "salmon"          "NT_turquoise"        "2.77154999843845e-25"
+pOut "mediumpurple1"   "NT_darkgreen"        "1.68642265512592e-24"
+pOut "brown"           "NT_turquoise"        "1.82446984641933e-24"
+pOut "pink4"           "NT_salmon"           "3.0416551329612e-22" 
+pOut "thistle1"        "NT_honeydew1"        "4.49009541367227e-20"
+pOut "firebrick3"      "NT_salmon"           "1.30067964561269e-18"
+pOut "grey60"          "NT_lightpink4"       "1.42793145365404e-17"
+pOut "palevioletred3"  "NT_grey60"           "2.73156249425633e-16"
+pOut "grey"            "NT_grey"             "2.83468470121998e-16"
+pOut "pink"            "NT_pink"             "1.2780599981929e-13" 
+pOut "turquoise"       "NT_lightpink4"       "1.6913551673665e-13" 
+pOut "navajowhite1"    "NT_yellow"           "2.89417763354802e-13"
+pOut "green"           "NT_midnightblue"     "2.93518396423864e-13"
+pOut "lightslateblue"  "NT_salmon"           "4.07668920287696e-10"
+pOut "palevioletred3"  "NT_yellow"           "4.08775894316892e-10"
+pOut "thistle3"        "NT_lightyellow"      "6.86174602901074e-10"
+pOut "blue4"           "NT_brown"            "7.20434811226519e-10"
+pOut "thistle1"        "NT_darkred"          "7.46637933365309e-10"
+pOut "honeydew1"       "NT_tan"              "6.20516478841292e-09"
+pOut "magenta"         "NT_salmon"           "8.75203956943029e-09"
+pOut "coral3"          "NT_turquoise"        "9.7776670423867e-09" 
+pOut "pink"            "NT_black"            "1.12162565054068e-08"
+pOut "brown"           "NT_greenyellow"      "4.15070260152386e-08"
+pOut "brown2"          "NT_turquoise"        "4.24464868834185e-08"
+pOut "thistle1"        "NT_yellow4"          "6.84523425085838e-08"
+pOut "pink"            "NT_darkgrey"         "2.18320182622943e-07"
+pOut "magenta"         "NT_navajowhite2"     "2.76143731801443e-07"
+pOut "brown4"          "NT_grey"             "4.1649798132007e-07" 
+pOut "honeydew"        "NT_antiquewhite4"    "7.30478569536858e-07"
+pOut "firebrick3"      "NT_skyblue"          "7.42945144150389e-07"
+pOut "blue"            "NT_grey"             "1.07962244076021e-06"
+pOut "lightslateblue"  "NT_tan"              "1.47999167834118e-06"
+pOut "green"           "NT_lightcyan1"       "1.62729278008637e-06"
+pOut "sienna3"         "NT_purple"           "1.66884738704466e-06"
+pOut "lightcyan"       "NT_ivory"            "2.30841522393523e-06"
+pOut "steelblue"       "NT_midnightblue"     "3.59371993854838e-06"
+pOut "honeydew1"       "NT_salmon"           "4.74927225479666e-06"
+pOut "salmon"          "NT_blue"             "5.37409826563389e-06"
+pOut "darkgrey"        "NT_antiquewhite4"    "6.72024733839915e-06"
+pOut "turquoise"       "NT_brown4"           "8.50612067403677e-06"
+pOut "skyblue3"        "NT_plum"             "1.24476050607778e-05"
+pOut "darkorange"      "NT_salmon4"          "2.49721176814661e-05"
+pOut "darkorange"      "NT_sienna3"          "2.54351610845774e-05"
+pOut "magenta"         "NT_skyblue2"         "4.0498359180492e-05" 
+pOut "green"           "NT_plum1"            "4.15759372236219e-05"
+pOut "purple"          "NT_darkgrey"         "5.57637273055407e-05"
+pOut "honeydew1"       "NT_skyblue"          "7.44544096133564e-05"
+pOut "lightslateblue"  "NT_skyblue"          "8.46016383566594e-05"
+pOut "yellow"          "NT_grey"             "9.12553694168434e-05"
+pOut "salmon1"         "NT_yellow"           "9.71538104297189e-05"
+pOut "blue4"           "NT_turquoise"        "9.94477898500974e-05"
+pOut "ivory"           "NT_palevioletred3"   "0.000136832489082456"
+pOut "pink"            "NT_coral1"           "0.000142806006300427"
+pOut "brown2"          "NT_brown"            "0.000149939310795355"
+pOut "blueviolet"      "NT_turquoise"        "0.000164066409096822"
+pOut "firebrick4"      "NT_turquoise"        "0.000172971128872565"
+pOut "firebrick4"      "NT_brown"            "0.000200759830002851"
+pOut "black"           "NT_grey"             "0.000210463092613786"
+pOut "skyblue2"        "NT_darkgreen"        "0.000229147371610537"
+pOut "skyblue3"        "NT_firebrick4"       "0.000267872758432862"
+pOut "yellow4"         "NT_black"            "0.000287578784584465"
+pOut "royalblue"       "NT_yellow"           "0.000298474549692546"
+pOut "orangered3"      "NT_midnightblue"     "0.00036549899989437" 
+pOut "darkorange"      "NT_navajowhite2"     "0.000435550713436433"
+pOut "yellow4"         "NT_sienna3"          "0.000495098476923484"
+pOut "yellowgreen"     "NT_pink"             "0.000526984974478949"
+pOut "darkred"         "NT_salmon"           "0.00156481612732404" 
+pOut "purple"          "NT_pink"             "0.00158646137101342" 
+pOut "paleturquoise"   "NT_white"            "0.00188673288333933" 
+pOut "darkorange2"     "NT_yellowgreen"      "0.00205567186037964" 
+pOut "lightpink3"      "NT_lightgreen"       "0.00209911766312624" 
+pOut "pink4"           "NT_skyblue2"         "0.00231000450369925" 
+pOut "skyblue4"        "NT_brown"            "0.00240113859342646" 
+pOut "magenta"         "NT_darkorange2"      "0.00293426455121053" 
+pOut "lightcyan1"      "NT_darkseagreen4"    "0.00294815023193093" 
+pOut "lightyellow"     "NT_yellow"           "0.0036845094662645"  
+pOut "darkviolet"      "NT_mediumpurple3"    "0.00407043519974022" 
+pOut "ivory"           "NT_grey60"           "0.00498233747240874" 
+pOut "violet"          "NT_coral1"           "0.00524664827191746" 
+pOut "violet"          "NT_darkseagreen4"    "0.00524664827191746" 
+pOut "magenta"         "NT_lightgreen"       "0.00538705544780134" 
+pOut "palevioletred3"  "NT_tan"              "0.00565480194719227" 
+pOut "paleturquoise"   "NT_darkgreen"        "0.00569446714797438" 
+pOut "lightsteelblue1" "NT_red"              "0.00577383727019029" 
+pOut "orangered4"      "NT_lightgreen"       "0.00594023668997927" 
+pOut "ivory"           "NT_steelblue"        "0.00747675311916178" 
+pOut "lightpink3"      "NT_tan"              "0.00784976018005925" 
+pOut "violet"          "NT_sienna3"          "0.00825621154491535" 
+pOut "salmon2"         "NT_cyan"             "0.00837579503555767" 
+pOut "ivory"           "NT_skyblue"          "0.0126978131198643"  
+pOut "purple"          "NT_black"            "0.0157374835944274"  
+pOut "darkorange"      "NT_lightgreen"       "0.0208405699743098"  
+pOut "darkseagreen3"   "NT_salmon4"          "0.0213917879485077"  
+pOut "purple"          "NT_darkolivegreen"   "0.0217666074080602"  
+pOut "brown2"          "NT_blue"             "0.0272442641677816"  
+pOut "blue2"           "NT_purple"           "0.0287307070263332"  
+pOut "yellow4"         "NT_coral1"           "0.0295334345499215"  
+pOut "yellow4"         "NT_darkseagreen4"    "0.0295334345499215"  
+pOut "firebrick4"      "NT_greenyellow"      "0.0299235290285381"  
+pOut "purple"          "NT_darkslateblue"    "0.0312321680973144"  
+pOut "lightpink2"      "NT_violet"           "0.0344820555213669"  
+pOut "red"             "NT_grey"             "0.0358882815705981"  
+pOut "skyblue3"        "NT_mediumpurple2"    "0.0386348938632"     
+pOut "pink"            "NT_bisque4"          "0.0390232463631965"  
+pOut "turquoise"       "NT_ivory"            "0.0409925354730032"  
+pOut "tan4"            "NT_darkolivegreen"   "0.041976451797311"   
+pOut "palevioletred1"  "NT_steelblue"        "0.0454746288803298"  
+pOut "skyblue3"        "NT_orangered3"       "0.0455047107852835"  
+pOut "skyblue1"        "NT_greenyellow"      "0.048029072260558"

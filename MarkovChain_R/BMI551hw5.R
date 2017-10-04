@@ -1,0 +1,129 @@
+#MK
+#BMI551 HW5
+
+#Q1.a.: construct transition matrix
+TM <- matrix(c(c(0.15, 0.85),c(0.2, 0.8)), ncol=2, byrow=TRUE)
+rownames(TM) <- c('AT-rich', 'GC-rich') ; colnames(TM) <- c('AT-rich', 'GC-rich')
+
+#Q1.b.: construct emmision matrix 
+EM <- matrix(c(c(0.3, 0.1, 0.2, 0.4),c(0.05, 0.3, 0.55, 0.1)), nrow=2, ncol=4, byrow=TRUE)
+rownames(EM) <- c('AT-rich', 'GC-rich') ; colnames(EM) <- c('A','C','G','T') 
+
+#Q1.c.: generate a 100bp DNA seq by employing an HMM built from the 
+#transition mat, emission mat, start probabilities (assume equal), and number of bp for the newly
+#generated sequence
+
+#using the example from BMI551_Mahyari_ClassDemo as a reference
+#Implement a HMM simulation function to generate 100bp DNA sequence
+HMMsim = function(trans, emmiss, start, N){
+  #nucleotide alphabet
+  nucs <- c('A','C','G','T')
+  #AT rich or GC rich states
+  state_list <- c('AT-rich', 'GC-rich')
+  #initialize list to store the prev states for each nucleotide 
+  #all_states<-list() returned error so character()
+  all_states <- character()
+  #initialize list to store the generated 100bp sequence
+  seq_list <- character()
+  #randomly choose state for the first generated nucleotide (50:50 chance)
+  currentState <- sample(state_list, 1, prob=start)
+  cat("**** Starting on state:", currentState, "\n**********\n")
+  #use the emmision mat to look up the probabilities associated with each nucleotide for the 
+  #current state and randomly choose a nucleotide
+  nuc <- sample(nucs, 1, prob=emmiss[currentState,])
+  cat("**** Starting nucleotide:", nuc, "\n**********\n")
+  #keep track of the state that generated the first nucleotide
+  all_states[1] <- currentState
+  #generate nucleotide sequence
+  seq_list[1] <- nuc
+  
+  # Make N more steps through the HMM to generate the rest of the sequence
+  for (i in 2:N)
+  {
+    #look up the state that generated the previous nucleotide 
+    prevState <- all_states[i-1]
+    #use the transition mat to look up the probabilities associated with the prevState and randomly
+    #choose the new state
+    newState <- sample(state_list, 1, prob=trans[prevState,])
+    #use the emmision mat to look up the probabilities associated with each nucleotide for the 
+    #newState and randomly choose the ith nucleotide
+    nuc <- sample(nucs, 1, prob=emmiss[newState,])
+    cat(i, " ***", prevState, "->", newState, "Nucleotide:", nuc, "\n")
+    #store current ith state
+    all_states[i] <- newState
+    #store current ith nuc
+    seq_list[i] <- nuc
+  }
+  cat("**** Ending on state:", all_states[N], "\n******************\n");
+  #return the sequence and states
+  return (list(seq = seq_list,states = all_states))
+}
+
+#run the HMMsim sequence generator function with params: TM, EM, 50:50 start probability, N=100bp 
+test_seq <- HMMsim(TM, EM, c(0.5,0.5), 100)
+#print the generated sequence i.e. ith nucleotide and the ith state
+for (i in 1:length(test_seq$seq))
+{
+  print(paste('Nuc: ',test_seq$seq[i], ' State: ', test_seq$states[i]))
+}
+cat('\n********************************\n\n')
+
+#Q1.d. : Infer the AT or GC rich states given a DNA sequence i.e. use our HMM to
+#find the most probable state path
+#As discussed in class, we must implement the VITERBI ALGORITHM!!
+#using Shannon's lecture from last year HMM_2015.pdf as reference for the Viterbi algorithm
+#implement a Viterbi function to calculate the most probable state path
+
+#The first step is to construct a Viterbi matrix given our sequence, transition mat, and emmission mat
+Viterbi <- function(DNA_seq, trans, emiss)
+{
+  #construct a matrix with number of nucleotides as rows and number of states as cols
+  VM <- matrix(NA, nrow=length(DNA_seq), ncol=dim(trans)[1])
+  #step 1: initialize the matrix i.e. Vbegin(0)=1  Vnotbegin(0)=0
+  #fill first row with zeros noting that each row represents the ith index in the DNA_seq
+  VM[1,] <- 0
+  #fill in the beggining 
+  VM[1,1] <- 1
+  #populate the VM matrix i.e. calculate most likely states iteratively through observed DNA_seq
+  #iterate through each row of the matrix i.e. each nucleotide position in the given sequence
+  for (i in 2:length(DNA_seq))
+  {
+    #consider each state's probability given the observed nucleotide
+    for (st in 1:dim(trans)[1])
+    {
+      #using the emmission mat we consider each nucleotide and calculate the probability of the  
+      #current state index, st, emmiting the ith nucleotide
+      nuc_prob <- emiss[st,DNA_seq[i]]
+      #fill out the cell of the matrix with the product of the current state probability and the max
+      #of the previous position v[(i-1),] and the transition probability given the current state,
+      #st, using the transition mat
+      #step 2
+      VM[i,st] <- nuc_prob*max(VM[(i-1),]*trans[,st])
+      #e.g. el(xi+1)*max{vk(i)*akl}
+    }
+  }
+  #Find the most probable state path by iterating through each row of the VM matrix, i.e. each nucleotide
+  #in the sequence, and compute which state has the max probability for that nucleotide
+  #step 3
+  path <- numeric()
+  for (i in 1:nrow(VM))
+  {
+    ?which.max
+    path[i] <- which.max(VM[i,])
+  }
+  
+  #return the most probable state path!
+  return (path)
+}
+
+#run the Viterbi algorithm given the observed sequence, we return the most probable state path
+seq <- c("A", "A", "G", "C", "G", "T", "G", "G", "G", "G", "C", "C", "C", "C", "G", "G", "C", "G", "A", "C", "A", "T", "G", "G", "G", "G", "T", "G", "T", "C")
+v_test <- Viterbi(seq,TM,EM)
+#print the most probable states i.e. ith nucleotide and the ith state
+for (i in 1:length(v_test))
+{
+  if (v_test[i] == 1){v_test[i]=rownames(EM)[1]}
+  else {v_test[i]=rownames(EM)[2]}
+  print(paste('Nuc: ',seq[i], ' State: ', v_test[i]))
+}
+  
