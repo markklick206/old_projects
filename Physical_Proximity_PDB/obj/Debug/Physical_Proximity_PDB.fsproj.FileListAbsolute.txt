@@ -1,0 +1,22 @@
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.exe.config
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.XML
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.exe
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.pdb
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\FSharp.Core.dll
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\FSharp.Core.xml
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\obj\Debug\Physical_Proximity_PDB.exe
+c:\users\mklick16\documents\visual studio 2013\Projects\Physical_Proximity_PDB\Physical_Proximity_PDB\obj\Debug\Physical_Proximity_PDB.pdb
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.exe.config
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.XML
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.exe
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.pdb
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\FSharp.Core.dll
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\bin\Debug\FSharp.Core.xml
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\obj\Debug\Physical_Proximity_PDB.exe
+C:\Users\mklick16\Desktop\Physical_Proximity_PDB\Physical_Proximity_PDB\obj\Debug\Physical_Proximity_PDB.pdb
+\\cs1\CS_Research\Celiac Project\2014_Summer_Research\Physical_Proximity_PDB_WORKING\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.exe.config
+\\cs1\CS_Research\Celiac Project\2014_Summer_Research\Physical_Proximity_PDB_WORKING\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.XML
+\\cs1\CS_Research\Celiac Project\2014_Summer_Research\Physical_Proximity_PDB_WORKING\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.exe
+\\cs1\CS_Research\Celiac Project\2014_Summer_Research\Physical_Proximity_PDB_WORKING\Physical_Proximity_PDB\bin\Debug\Physical_Proximity_PDB.pdb
+\\cs1\CS_Research\Celiac Project\2014_Summer_Research\Physical_Proximity_PDB_WORKING\Physical_Proximity_PDB\obj\Debug\Physical_Proximity_PDB.exe
+\\cs1\CS_Research\Celiac Project\2014_Summer_Research\Physical_Proximity_PDB_WORKING\Physical_Proximity_PDB\obj\Debug\Physical_Proximity_PDB.pdb
